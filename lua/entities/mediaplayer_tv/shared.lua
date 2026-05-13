@@ -58,7 +58,7 @@ else -- CLIENT
 	local TextScale = 700
 
 	function ENT:Draw(flags)
-		self:DrawModel()
+		self:DrawModel(flags)
 
 		local isDepthPass = ( bit.band( flags, STUDIO_SSAODEPTHTEXTURE ) != 0 || bit.band( flags, STUDIO_SHADOWDEPTHTEXTURE ) != 0 )
 		if ( isDepthPass ) then return end
